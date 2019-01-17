@@ -1,27 +1,33 @@
-# Pythagorean Triplet
+# Prime Factors
 
-A Pythagorean triplet is a set of three natural numbers, {a, b, c}, for
-which,
+Compute the prime factors of a given natural number.
 
-```text
-a**2 + b**2 = c**2
-```
+A prime number is only evenly divisible by itself and 1.
 
-and such that,
+Note that 1 is not a prime number.
 
-```text
-a < b < c
-```
+## Example
 
-For example,
+What are the prime factors of 60?
 
-```text
-3**2 + 4**2 = 9 + 16 = 25 = 5**2.
-```
+- Our first divisor is 2. 2 goes into 60, leaving 30.
+- 2 goes into 30, leaving 15.
+  - 2 doesn't go cleanly into 15. So let's move on to our next divisor, 3.
+- 3 goes cleanly into 15, leaving 5.
+  - 3 does not go cleanly into 5. The next possible factor is 4.
+  - 4 does not go cleanly into 5. The next possible factor is 5.
+- 5 does go cleanly into 5.
+- We're left only with 1, so now, we're done.
 
-Given an input integer N, find all Pythagorean triplets for which `a + b + c = N`.
+Our successful divisors in that computation represent the list of prime
+factors of 60: 2, 2, 3, and 5.
 
-For example, with N = 1000, there is exactly one Pythagorean triplet for which `a + b + c = 1000`: `{200, 375, 425}`.
+You can check this yourself:
+
+- 2 * 2 * 3 * 5
+- = 4 * 15
+- = 60
+- Success!
 
 ## Rust Installation
 
@@ -78,7 +84,7 @@ If you want to know more about Exercism, take a look at the [contribution guide]
 
 ## Source
 
-Problem 9 at Project Euler [http://projecteuler.net/problem=9](http://projecteuler.net/problem=9)
+The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
